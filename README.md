@@ -19,3 +19,5 @@
    - **Model:** YOLOv8 Nano dari Ultralytics.
    - **Tugas:** Eksplorasi arsitektur produksi untuk lokalisasi dan deteksi objek.
    - **Modifikasi:** Mengubah *Confidence Threshold* inferensi dari `0.25` (bawaan) menjadi `0.85` untuk mengeliminasi prediksi dengan tingkat keyakinan rendah.
+
+Link Drive: https://drive.google.com/drive/folders/1mq-mcwmWFHtUbQsSdRstZAPIwOetjhpU?usp=sharing

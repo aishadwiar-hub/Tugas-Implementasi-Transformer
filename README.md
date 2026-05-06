@@ -5,15 +5,15 @@
 
 ## 📌 Deskripsi Proyek
 
-1. **Text Classification (Transformer vs LSTM)**
+1. **Text Classification (Transformer vs LSTM vs TextCNN)**
    - **Dataset:** AG News (4 Kelas).
-   - **Tugas:** Membangun *Text Transformer* dengan modul *Embedding, Positional Encoding*, dan *Self-Attention*, lalu membandingkannya dengan Bidirectional LSTM.
-   - **Hasil:** Transformer mengungguli LSTM baik dari segi akurasi (88.72%) maupun kecepatan komputasi berkat mekanisme paralelisasi *attention*.
+   - **Tugas:** Membangun *Text Transformer* dari awal (*from scratch*) dengan modul *Embedding*, *Positional Encoding*, dan *Self-Attention*, lalu membandingkan performanya dengan arsitektur sekuensial konvensional (Bidirectional LSTM) dan jaringan konvolusi 1D (TextCNN).
+   - **Hasil:** Transformer mengungguli model lainnya dari segi akurasi akhir (88.41%) berkat mekanisme atensi global. Namun, TextCNN (87.58%) terbukti menjadi arsitektur komputasi yang paling efisien dan dieksekusi paling cepat. LSTM (85.75%) justru memakan waktu terlama akibat proses komputasi yang berjalan sekuensial.
 
-2. **Image Classification (Vision Transformer vs Simple CNN)**
-   - **Dataset:** CIFAR-10 (Resolusi 32x32).
-   - **Tugas:** Membangun *Vision Transformer* (ViT) dengan mekanisme *Patch Splitting* (4x4 dan 8x8), lalu membandingkannya dengan CNN sederhana.
-   - **Hasil:** CNN (74.19%) mengungguli ViT (56.85%) pada dataset beresolusi kecil karena CNN memiliki *inductive bias* (lokalitas dan invariansi translasi) yang tidak dimiliki oleh ViT tanpa tahap *pre-training* skala masif.
+2. **Image Classification (Vision Transformer vs Simple CNN vs ResNet)**
+   - **Dataset:** CIFAR-10 (Resolusi 32x32 piksel, RGB).
+   - **Tugas:** Membangun *Vision Transformer* (ViT) dengan mekanisme *Patch Splitting* (eksperimen 4x4 dan 8x8), lalu membandingkannya dengan dua arsitektur *baseline* berbasis konvolusi: Simple CNN dan ResNet.
+   - **Hasil:** Jaringan konvolusi Simple CNN (74.47%) dan ResNet (72.30%) menang telak atas ViT (55.45%). Ketiadaan *inductive bias* spasial pada ViT menyebabkannya mengalami *underfitting* parah di dataset berskala kecil. Sebaliknya, ResNet mendemonstrasikan stabilitas dan efisiensi memori yang sangat luar biasa meskipun hanya berbekal ~78 ribu parameter.
 
 3. **Object Detection (Eksplorasi GitHub Non-Klasifikasi)**
    - **Model:** YOLOv8 Nano dari Ultralytics.
